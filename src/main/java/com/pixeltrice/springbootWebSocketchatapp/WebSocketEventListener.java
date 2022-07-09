@@ -18,6 +18,8 @@ public class WebSocketEventListener {
   @Autowired
   private SimpMessageSendingOperations messagingTemplate;
 
+
+
   @EventListener
   public void handleWebSocketConnectListener(SessionConnectedEvent event) {
     logger.info("Received a new web socket connection");

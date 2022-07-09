@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ChatController {
 
-  @MessageMapping("/chat.sendMessage")
+  @MessageMapping({"/chat.sendMessage"})
   @SendTo("/topic/public")
   public ChatMessagePojo sendMessage(@Payload ChatMessagePojo chatMessagePojo) {
     return chatMessagePojo;
